@@ -8,11 +8,12 @@ function generateRandomString($length = 5) {
     }
     return $randomString;
 }
-
+// EDIT LINE BELOW TO UPLOAD TO ANOTHER DIRECTORY
 $target_dir = "i/";
 $target_file = $target_dir . generateRandomString() . "." . pathinfo($target_dir . basename($_FILES["fileToUpload"]["name"]),PATHINFO_EXTENSION);
 $uploadOk = 1;
-$fullUrl = "http://fille.cf/" . $target_file;
+// EDIT THE LINE BELOW
+$fullUrl = "http://fille.cf/i/" . $target_file;
 // Check if file already exists
 if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
