@@ -13,7 +13,6 @@ $target_dir = "i/";
 $target_file = $target_dir . generateRandomString() . "." . pathinfo($target_dir . basename($_FILES["fileToUpload"]["name"]),PATHINFO_EXTENSION);
 $uploadOk = 1;
 $fullUrl = "http://fille.cf/" . $target_file;
-$altfull = "https://filli.000webhostapp.com/" . $target_file;
 // Check if file already exists
 if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
@@ -27,7 +26,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-        echo "<br>Access it at: <a href='$fullUrl'>$fullUrl</a> or <a href='$altfull'>$altfull</a>";
+        echo "<br>Access it at: <a href='$fullUrl'>$fullUrl</a>";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
