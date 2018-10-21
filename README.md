@@ -13,4 +13,4 @@ Please give credits!
 # Team:
 -Domenic (Creator)\
 -Draco (CSS)\
--Foex (Base)
+-FoeX (Base)
